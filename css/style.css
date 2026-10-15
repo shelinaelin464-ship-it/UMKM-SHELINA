@@ -1,0 +1,1705 @@
+/* =========================================
+   GORENGAN NONA CHECHE
+   CUSTOM CSS
+========================================= */
+
+
+/* =========================================
+   1. VARIABEL WARNA
+========================================= */
+
+:root {
+    --cream: #fffaf2;
+    --white: #fffdf9;
+    --orange: #e87836;
+    --orange-dark: #c95b20;
+    --brown: #30251d;
+    --muted: #786e63;
+    --green: #566c45;
+    --line: #f0e5d8;
+}
+
+
+/* =========================================
+   2. PENGATURAN DASAR
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background: var(--white);
+    color: var(--brown);
+
+    font-family: "DM Sans", sans-serif;
+
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================
+   3. NAVBAR
+========================================= */
+
+.navbar-custom {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    padding: 12px 0;
+
+    background: rgba(255, 253, 249, 0.98);
+
+    border-bottom: 1px solid var(--line);
+
+    backdrop-filter: blur(10px);
+}
+
+.navbar-custom .container {
+    min-width: 0;
+}
+
+.navbar-brand {
+    min-width: 0;
+    margin-right: 12px;
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    border: 2px solid #f0c49d;
+
+    object-fit: cover;
+}
+
+.brand-name {
+    color: var(--brown);
+
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+.brand-name span {
+    color: var(--orange);
+}
+
+.navbar-toggler {
+    flex-shrink: 0;
+
+    padding: 7px 10px;
+
+    border: 1px solid #e6d9ca;
+    border-radius: 10px;
+
+    box-shadow: none !important;
+}
+
+.navbar-nav .nav-link {
+    padding: 10px 8px !important;
+
+    color: #65584d;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: color 0.2s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--orange);
+}
+
+
+/* =========================================
+   4. BUTTON
+========================================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 12px 22px;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        background 0.25s,
+        color 0.25s,
+        transform 0.25s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-orange {
+    color: white;
+
+    background: var(--orange);
+    border: 1px solid var(--orange);
+
+    box-shadow: 0 8px 18px rgba(232, 120, 54, 0.18);
+}
+
+.btn-orange:hover {
+    color: white;
+
+    background: var(--orange-dark);
+    border-color: var(--orange-dark);
+}
+
+.btn-outline-orange {
+    color: var(--brown);
+
+    background: transparent;
+    border: 1px solid #e4d6c6;
+}
+
+.btn-outline-orange:hover {
+    color: var(--orange-dark);
+
+    background: white;
+    border-color: var(--orange);
+}
+
+.btn-light-custom {
+    width: fit-content;
+
+    color: var(--green);
+
+    background: #fff8ed;
+    border: 1px solid #fff8ed;
+}
+
+.btn-light-custom:hover {
+    color: var(--orange-dark);
+    background: white;
+}
+
+
+/* =========================================
+   5. HERO SECTION
+========================================= */
+
+.hero {
+    padding: 76px 0;
+
+    background:
+        radial-gradient(
+            ellipse at 85% 30%,
+            #fff0df 0,
+            transparent 40%
+        ),
+        var(--cream);
+
+    overflow: hidden;
+}
+
+.hero-content {
+    min-width: 0;
+}
+
+.badge-custom {
+    display: inline-block;
+
+    padding: 9px 14px;
+
+    color: var(--orange-dark);
+    background: #fff0e1;
+
+    border-radius: 50px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    margin: 24px 0 18px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 5.3vw, 72px);
+    font-weight: 800;
+
+    line-height: 1.08;
+    letter-spacing: -1.8px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: var(--orange);
+
+    font-style: italic;
+}
+
+.hero-description {
+    max-width: 470px;
+
+    margin-bottom: 0;
+
+    color: var(--muted);
+
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 26px;
+}
+
+.hero-note {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+.note-icon {
+    display: grid;
+    place-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    color: var(--green);
+    background: #e9efdf;
+
+    border-radius: 13px;
+
+    font-size: 21px;
+}
+
+.hero-note strong,
+.hero-note small {
+    display: block;
+}
+
+.hero-note strong {
+    font-size: 12px;
+}
+
+.hero-note small {
+    margin-top: 4px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   6. GAMBAR HERO
+========================================= */
+
+.hero-image {
+    position: relative;
+
+    width: 100%;
+    max-width: 500px;
+
+    margin: auto;
+    padding: 12px;
+}
+
+.hero-image > img {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 45% 45% 25px 25px;
+
+    box-shadow:
+        0 24px 55px rgba(107, 69, 34, 0.15);
+}
+
+.floating-card {
+    position: absolute;
+
+    left: 0;
+    bottom: 30px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    max-width: calc(100% - 20px);
+
+    padding: 13px 16px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 12px 35px rgba(76, 48, 26, 0.14);
+}
+
+.floating-icon {
+    display: grid;
+    place-items: center;
+
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    color: var(--orange);
+    background: #fff0e1;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+}
+
+.floating-card strong,
+.floating-card small {
+    display: block;
+}
+
+.floating-card strong {
+    font-size: 11px;
+}
+
+.floating-card small {
+    margin-top: 4px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   7. BENEFITS
+========================================= */
+
+.benefits {
+    padding: 22px 0;
+
+    background: white;
+
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 35px;
+}
+
+.benefit-item span {
+    color: var(--orange);
+    font-size: 21px;
+}
+
+.benefit-item p {
+    margin: 0;
+
+    color: #55483c;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   8. PENGATURAN SECTION
+========================================= */
+
+.section-padding {
+    padding: 85px 0;
+}
+
+.section-heading {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto 42px;
+}
+
+.section-label {
+    display: inline-block;
+
+    color: var(--orange-dark);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.section-heading h2,
+.about-content h2 {
+    margin: 13px 0 15px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+}
+
+.section-heading h2 span,
+.about-content h2 span {
+    color: var(--orange);
+}
+
+.section-heading > p {
+    max-width: 540px;
+
+    margin: 0 auto;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   9. PRODUK
+========================================= */
+
+.products-section {
+    background: var(--white);
+}
+
+.product-card {
+    height: 100%;
+
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid var(--line);
+    border-radius: 18px;
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 38px rgba(67, 43, 25, 0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: 235px;
+
+    overflow: hidden;
+
+    background: #fff0dc;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.3s;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.04);
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 10px;
+}
+
+.product-info h3 {
+    margin: 3px 0 0;
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.price {
+    flex-shrink: 0;
+
+    padding: 6px 9px;
+
+    color: var(--orange-dark);
+    background: #fff1e5;
+
+    border-radius: 8px;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.product-info p {
+    min-height: 44px;
+
+    margin-bottom: 14px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.product-tag {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    color: #8d6d4e;
+
+    border: 1px solid #f1e4d5;
+    border-radius: 50px;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   10. KARTU PEMESANAN
+========================================= */
+
+.order-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    height: 100%;
+    min-height: 320px;
+
+    padding: 30px;
+
+    color: white;
+
+    background: var(--green);
+
+    border-radius: 18px;
+}
+
+.order-icon {
+    display: grid;
+    place-items: center;
+
+    width: 45px;
+    height: 45px;
+
+    margin-bottom: 18px;
+
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+
+    border-radius: 14px;
+
+    font-size: 22px;
+}
+
+.order-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 26px;
+    line-height: 1.25;
+}
+
+.order-card p {
+    margin: 10px 0 20px;
+
+    color: #e0e5d9;
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.price-note {
+    margin-top: 25px;
+
+    color: #9b8e80;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   11. CERITA KAMI
+========================================= */
+
+.about-section {
+    background: #f9f3e9;
+
+    overflow: hidden;
+}
+
+/* Kolom gambar */
+
+.about-image {
+    position: relative;
+
+    width: 100%;
+    max-width: 370px;
+
+    margin: 0 auto;
+    padding: 12px;
+}
+
+.about-image > img {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: contain;
+
+    background: white;
+
+    border: 1px solid #eee0cf;
+    border-radius: 50%;
+
+    box-shadow:
+        0 20px 40px rgba(91, 58, 30, 0.1);
+}
+
+/* Stiker gambar */
+
+.about-sticker {
+    position: absolute;
+
+    right: 0;
+    bottom: 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 95px;
+    height: 95px;
+
+    color: white;
+    background: var(--orange);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 10px 25px rgba(232, 120, 54, 0.25);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    line-height: 1.5;
+    text-align: center;
+
+    transform: rotate(7deg);
+}
+
+/* Konten cerita */
+
+.about-content {
+    max-width: 590px;
+    margin: 0 auto;
+}
+
+.about-content .section-label {
+    margin-bottom: 3px;
+}
+
+.about-content h2 {
+    max-width: 520px;
+
+    margin: 12px 0 18px;
+
+    font-size: clamp(32px, 3.5vw, 45px);
+
+    line-height: 1.2;
+    letter-spacing: -0.7px;
+}
+
+.about-content h2 span {
+    display: inline;
+}
+
+/* Paragraf utama */
+
+.about-content .about-lead {
+    margin-bottom: 12px;
+
+    color: #4c4035;
+
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+.about-content .about-description {
+    margin-bottom: 0;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+/* Daftar keunggulan */
+
+.about-points {
+    display: grid;
+
+    gap: 19px;
+
+    margin-top: 28px;
+}
+
+.about-point {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 15px;
+}
+
+.point-number {
+    display: grid;
+    place-items: center;
+
+    flex: 0 0 46px;
+
+    width: 46px;
+    height: 46px;
+
+    color: var(--orange-dark);
+
+    border: 1px solid #e9d7c1;
+    border-radius: 13px;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.point-content {
+    flex: 1;
+    min-width: 0;
+
+    padding-top: 2px;
+}
+
+.point-content strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--brown);
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.point-content small {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   12. KONTAK
+========================================= */
+
+.contact-section {
+    padding-top: 80px;
+
+    background: var(--cream);
+}
+
+.contact-card {
+    height: 100%;
+
+    padding: 28px 22px;
+
+    text-align: center;
+
+    background: white;
+
+    border: 1px solid var(--line);
+    border-radius: 18px;
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 28px rgba(67, 43, 25, 0.08);
+}
+
+.contact-icon {
+    display: grid;
+    place-items: center;
+
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto 16px;
+
+    color: var(--orange);
+    background: #fff0e1;
+
+    border-radius: 15px;
+
+    font-size: 22px;
+}
+
+.contact-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.contact-card p {
+    min-height: 45px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.contact-card a {
+    display: inline-block;
+
+    margin-top: 5px;
+
+    color: var(--orange-dark);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.contact-card a:hover {
+    color: var(--brown);
+}
+
+.contact-note {
+    margin-top: 25px;
+
+    color: #948678;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   13. FOOTER
+========================================= */
+
+.footer {
+    padding: 22px 0;
+
+    background: var(--white);
+
+    border-top: 1px solid var(--line);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer p {
+    margin: 0;
+
+    color: #8d8175;
+
+    font-size: 11px;
+    text-align: center;
+}
+
+.back-top {
+    flex-shrink: 0;
+
+    color: #76685b;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.back-top:hover {
+    color: var(--orange-dark);
+}
+
+
+/* =========================================
+   14. TABLET DAN LAPTOP KECIL
+========================================= */
+
+@media (max-width: 991.98px) {
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-note {
+        justify-content: center;
+    }
+
+    .hero-image {
+        max-width: 440px;
+    }
+
+    .navbar-nav {
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-nav .btn {
+        margin-top: 8px;
+    }
+
+    /* Cerita Kami */
+
+    .about-image {
+        max-width: 300px;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+
+    .about-content h2 {
+        max-width: 100%;
+    }
+
+    .about-points {
+        gap: 16px;
+        margin-top: 22px;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* =========================================
+   15. HP
+========================================= */
+
+@media (max-width: 575.98px) {
+
+    /* Navbar */
+
+    .navbar-custom {
+        padding: 10px 0;
+    }
+
+    .navbar-custom .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .navbar-brand {
+        gap: 8px !important;
+        margin-right: 8px;
+    }
+
+    .logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .brand-name {
+        max-width: 225px;
+
+        font-size: clamp(13px, 3.9vw, 18px);
+
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+    }
+
+    .navbar-toggler {
+        padding: 5px 8px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        padding: 43px 0 48px;
+    }
+
+    .badge-custom {
+        padding: 8px 11px;
+        font-size: 10px;
+    }
+
+    .hero h1 {
+        margin: 20px 0 18px;
+
+        font-size: clamp(37px, 10vw, 48px);
+
+        line-height: 1.13;
+        letter-spacing: -1.2px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+        line-height: 1.85;
+    }
+
+    .hero-buttons {
+        gap: 9px;
+        margin-top: 22px;
+    }
+
+    .hero-buttons .btn {
+        padding: 11px 15px;
+        font-size: 11px;
+    }
+
+    .hero-note {
+        margin-top: 24px;
+    }
+
+    .hero-note strong {
+        font-size: 11px;
+    }
+
+    .hero-note small {
+        font-size: 10px;
+    }
+
+    .hero-image {
+        max-width: 350px;
+        padding: 8px;
+    }
+
+    .floating-card {
+        left: 0;
+        bottom: 20px;
+
+        gap: 8px;
+
+        padding: 10px 11px;
+    }
+
+    .floating-icon {
+        width: 32px;
+        height: 32px;
+
+        font-size: 16px;
+    }
+
+    .floating-card strong {
+        font-size: 10px;
+    }
+
+    .floating-card small {
+        font-size: 9px;
+    }
+
+
+    /* Benefits */
+
+    .benefits {
+        padding: 17px 0;
+    }
+
+    .benefit-item {
+        gap: 6px;
+    }
+
+    .benefit-item span {
+        font-size: 16px;
+    }
+
+    .benefit-item p {
+        font-size: 10px;
+    }
+
+
+    /* Section */
+
+    .section-padding {
+        padding: 58px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .section-label {
+        font-size: 10px;
+        letter-spacing: 1.3px;
+    }
+
+    .section-heading h2,
+    .about-content h2 {
+        margin-top: 12px;
+
+        font-size: clamp(29px, 8vw, 36px);
+
+        line-height: 1.2;
+        letter-spacing: -0.6px;
+    }
+
+    .section-heading > p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+
+    /* Produk */
+
+    .product-image {
+        height: 190px;
+    }
+
+    .product-info {
+        padding: 15px;
+    }
+
+    .product-title {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .product-info h3 {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 10px;
+    }
+
+    .product-info p {
+        min-height: 0;
+
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    .product-tag {
+        font-size: 9px;
+    }
+
+    .order-card {
+        min-height: 250px;
+        padding: 25px;
+    }
+
+    .order-card h3 {
+        font-size: 24px;
+    }
+
+
+    /* CERITA KAMI - HP */
+
+    .about-section {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .about-section .row {
+        --bs-gutter-y: 2rem;
+    }
+
+    .about-image {
+        max-width: 245px;
+
+        margin: 0 auto;
+        padding: 8px;
+    }
+
+    .about-image > img {
+        width: 100%;
+
+        aspect-ratio: 1 / 1;
+
+        object-fit: contain;
+    }
+
+    .about-sticker {
+        right: 0;
+        bottom: 5px;
+
+        width: 75px;
+        height: 75px;
+
+        font-size: 10px;
+    }
+
+    .about-content {
+        max-width: 100%;
+        padding: 0 5px;
+    }
+
+    .about-content .section-label {
+        margin-bottom: 2px;
+    }
+
+    .about-content h2 {
+        margin-top: 10px;
+        margin-bottom: 16px;
+
+        font-size: clamp(29px, 7.8vw, 36px);
+
+        line-height: 1.22;
+    }
+
+    .about-content h2 span {
+        display: inline;
+    }
+
+    .about-content .about-lead {
+        margin-bottom: 12px;
+
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .about-content .about-description {
+        margin-bottom: 0;
+
+        font-size: 12px;
+        line-height: 1.85;
+    }
+
+    .about-points {
+        gap: 18px;
+        margin-top: 25px;
+    }
+
+    .about-point {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .point-number {
+        flex-basis: 40px;
+
+        width: 40px;
+        height: 40px;
+
+        border-radius: 11px;
+
+        font-size: 11px;
+    }
+
+    .point-content {
+        padding-top: 1px;
+    }
+
+    .point-content strong {
+        margin-bottom: 5px;
+
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .point-content small {
+        font-size: 11px;
+        line-height: 1.75;
+    }
+
+
+    /* Kontak */
+
+    .contact-card {
+        padding: 23px 18px;
+    }
+
+    .contact-card p {
+        min-height: 0;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding: 25px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        justify-content: center;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+    .footer-content .navbar-brand {
+        justify-content: center;
+        margin: 0;
+    }
+
+    .footer p {
+        line-height: 1.8;
+    }
+
+}
+
+
+/* =========================================
+   16. HP KECIL
+========================================= */
+
+@media (max-width: 360px) {
+
+    .brand-name {
+        font-size: 12px;
+        letter-spacing: -0.4px;
+    }
+
+    .logo {
+        width: 34px;
+        height: 34px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-buttons .btn {
+        padding: 10px 12px;
+        font-size: 10px;
+    }
+
+    .product-image {
+        height: 155px;
+    }
+
+    .product-info {
+        padding: 12px;
+    }
+
+    .product-info h3 {
+        font-size: 12px;
+    }
+
+    .price {
+        padding: 5px 6px;
+        font-size: 9px;
+    }
+
+    .about-image {
+        max-width: 220px;
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+    }
+
+}
+
+/* =========================================
+   NAMA PRODUK BAHASA INGGRIS
+========================================= */
+
+.product-english {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+
+/* Tampilan HP */
+
+@media (max-width: 575.98px) {
+
+    .product-english {
+        margin-top: 4px;
+
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+}
+
+/* =========================================
+   JAM OPERASIONAL
+   GORENGAN NONA CHECHE
+========================================= */
+
+.operating-hours-section {
+    background-color: #fffaf2;
+}
+
+.hours-card {
+    max-width: 650px;
+    padding: 30px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #eadbca;
+    border-radius: 24px;
+
+    box-shadow: 0 12px 35px rgba(58, 37, 23, 0.06);
+}
+
+.hours-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding-bottom: 24px;
+    margin-bottom: 10px;
+
+    border-bottom: 1px solid #eee2d5;
+}
+
+.hours-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 64px;
+    height: 64px;
+
+    flex-shrink: 0;
+
+    background-color: #fff0e2;
+    color: #c86b36;
+
+    border-radius: 18px;
+
+    font-size: 35px;
+}
+
+.hours-header h3 {
+    margin-bottom: 5px;
+
+    color: #30251f;
+
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.hours-header p {
+    margin: 0;
+
+    color: #887c72;
+    font-size: 14px;
+}
+
+.hours-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.hours-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 16px;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #f2e9df;
+
+    color: #62574e;
+    font-size: 15px;
+}
+
+.hours-row:last-child {
+    border-bottom: none;
+}
+
+.hours-row strong {
+    color: #bd6637;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-align: right;
+}
+
+.hours-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    margin-top: 20px;
+    padding: 16px;
+
+    background-color: #fff5e9;
+
+    border-radius: 14px;
+}
+
+.hours-note span {
+    color: #c86b36;
+    font-size: 20px;
+}
+
+.hours-note p {
+    margin: 0;
+
+    color: #82756a;
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   RESPONSIVE JAM OPERASIONAL
+========================================= */
+
+@media (max-width: 575.98px) {
+
+    .hours-card {
+        padding: 22px 18px;
+
+        border-radius: 20px;
+    }
+
+    .hours-header {
+        gap: 14px;
+        padding-bottom: 20px;
+    }
+
+    .hours-icon {
+        width: 54px;
+        height: 54px;
+
+        border-radius: 15px;
+
+        font-size: 29px;
+    }
+
+    .hours-header h3 {
+        font-size: 21px;
+    }
+
+    .hours-row {
+        gap: 10px;
+        padding: 15px 0;
+
+        font-size: 13px;
+    }
+
+    .hours-row strong {
+        font-size: 12px;
+    }
+
+    .hours-note {
+        padding: 13px;
+    }
+
+    .hours-note p {
+        font-size: 12px;
+    }
+
+}
